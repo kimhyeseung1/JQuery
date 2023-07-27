@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>선택자7</title>
+</head>
+<body>
+   <h1>선택자</h1>
+   <section>
+      <div>
+         <p class="txt1">내용</p>
+      </div>
+   </section>
+   <section>
+      <div>
+         <p class="txt2">내용</p>
+      </div>
+   </section>
+   <!-- 자바스크립트 -->
+    <script>
+        $(function(){
+         //parents()모든 부모 요소들을 선택한다.
+         //특정부모 요소들을 선택하거나 조건을 지정하여 원하는 부모 요소들만 선택하는데 사용된다.
+         $(".txt1").parents().css(
+           { "border" : "2px dashed #00f"}
+         )
+
+         //원하는 요소만 선택하고 싶을땐 "div"
+         $(".txt2").parents("div").css(
+            {"border" : "2px dashed #f00"}
+         )
+        })
+    </script>
+</body>
+</html>
