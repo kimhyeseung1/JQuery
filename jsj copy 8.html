@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>선택자9</title>
+</head>
+<body>
+   <h1 class="title">탐색선택자</h1>
+    <ul id="menu">
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+      <li>내용4</li>
+    </ul>
+   <!-- 자바스크립트 -->
+    <script> 
+      $(function(){
+         $("#menu li:first").css({
+          "background-color" : "#ff0" 
+         })
+         //even:홀수를 선택
+         $("#menu li:even").css({
+          "background-color" : "#ff0" 
+         })
+         //odd : 짝수를 선택
+         $("#menu li:odd").css({
+          "background-color" : "#0ff" 
+         })
+      })
+  
+    </script>
+</body>
+</html>
