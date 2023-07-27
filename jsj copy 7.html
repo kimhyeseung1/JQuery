@@ -7,9 +7,18 @@
     <title>선택자8</title>
 </head>
 <body>
-   
+   <h1 class="title">선택자</h1>
+   <div>
+      <div>
+         <p class="txt1">내용</p>
+      </div>
+   </div>
+   <!-- 자바스크립트 -->
     <script>
-     
+       $(function() {
+         //closet()선택한 요소의 가장 가까운 조상요소를 선택을 한다.
+         $(".txt1").closest("div").css({"border" : "2px solid #f00"})
+       })
     </script>
 </body>
 </html>
