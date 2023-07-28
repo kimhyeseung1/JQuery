@@ -4,30 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>선택자14</title>
+    <title>선택자15</title>
 </head>
 <body>
-   
-    <script> 
-        $(function(){
-         var arr1 = ["서울", "대전", "부산", "전주"];
-         var arr2 = ["한국", "미국", "일본", "중국"];
-         var obj = {
-             "name":"정부장", 
-             "area":"서울"
-             //여기안에 있는 거는 배열이 아니라 객체
-             //대괄호 안에 있는 거는 배열
+    <div id="wrap">
+        <p><a href="http://easyspub.co.kr" target="_blank">EasysPub</a></p>
+        <p><a href="https://naver.com">Naver</a></p>
+        <p><a href="http://daum.net">Google</a></p>
+        <p><a href="http://google.co.kr" target="_blank">Daum</a></p>
+     </div>
+     <form action="#" method="get" id="member_f">
+        <p>
+           <label for="user_id">아이디</label>
+           <input type="text" name="user_id" id="user_id">
+        </p>
+        <p>
+           <label for="user_pw">비밀번호</label>
+           <input type="password" name="user_pw" id="user_pw">
+        </p>
+     </form>
+     <script>
+       $(function(){
+        $("#wrap a[target]").css({"color" : "#f00"})
 
-      }          
-       var idxNum = $.inArray("부산" , arr1)
-       console.log(idxNum);
-       //isArray = 배열이 맞는지 확인하는 용도
-       var okArray1 = $.isArray(arr1)
-       console.log(okArray1);
-       var okArray2 = $.isArray(obj)
-       console.log(okArray2);
+        //a[href^ /  a[href$ / a[href*
+        $("#wrap a[href^=https]").css({"color" : "#0f0"})
+        $("#wrap a[href$=net]").css({"color" : "#00f"})
+        $("#wrap a[href*=google]").css({"color" : "#000"})
+
+        //폼안에 있는 모든 텍스트 입력(input)요소들을 선택
+        $("#member_f :text").css({"background-color" : "#0f0"})
+        //폼안에 있는 모든 비밀번호 입력(input)요소들을 선택
+        $("#member_f :password").css({"background-color" : "#0ff"})
        })
-       
-    </script>
+     </script>
 </body>
 </html>
