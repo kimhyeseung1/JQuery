@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>선택자13</title>
+</head>
+<body>
+   
+    <script> 
+        $(function(){
+         var arr1 = [           
+            
+         { "area": "서울",
+            "name": "무대리"
+         }, {
+            "area": "부산",
+            "name": "홍과장"
+         }, {
+            "area": "대전",
+            "name": "박사장"
+         }, {
+            "area": "서울",
+            "name": "빅마마"
+         }
+      ]
+      //$.map() - 배열 또는 객체를 변형하여 새로운 배열 또는 객체를 생성한다.
+      var arr2 = $.map(arr1 , function(a,b){
+         if(a.area == "서울"){
+            return a;
+         }
+      });
+      console.log(arr2);
+        })
+    </script>
+</body>
+</html>
