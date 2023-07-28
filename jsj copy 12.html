@@ -32,6 +32,15 @@
          }
       });
       console.log(arr2);
+      // $.grep() 함수가 순회할 배열입니다.
+       var arr3 = $.grep(arr1, function(a,b){
+           if(a.area == "서울"){
+            return true;
+           }else{
+            return false
+           }
+
+       })
         })
     </script>
 </body>
